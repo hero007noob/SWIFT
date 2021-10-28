@@ -28,5 +28,5 @@ for (n, c) in str.enumerated() {
     //     arr.append(String(strarr[n+1]))
     //     }
     // }
-    
+ ////   
 //print(arr)
