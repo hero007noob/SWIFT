@@ -90,3 +90,19 @@ foo()
 // for i in 0..<m
 //     print("\(n): '\(c)'")
 // }
+// var primaryDiagnal = 0
+// var secondryDiagnal = 0
+// var num = arr.count-2
+// for row in 1..<arr.count-1{
+//   for colmn in (1..<arr.count-1).reversed(){
+//     if j==num{
+//         secondryDiagnal += arr[row][colmn]
+//         print("second",arr[row][colmn])
+// }
+//     if j==i{
+//         primaryDiagnal+=arr[row][colmn]
+//         print("first",arr[row][colmn])
+//     }
+// }
+//   num-=1  
+// }
