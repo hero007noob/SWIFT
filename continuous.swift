@@ -12,9 +12,17 @@ if(selectedList.count == 0){
   selectedList.append(selectedItem!)
   list[selectedItem!] = list[selectedItem!] == 0 ? 1 : 0
 }else{
-  if((selectedItem == selectedList[0]-1 || selectedItem == selectedList.last!+1) && !selectedList.contains(selectedItem!)){
-  list[selectedItem!] = 1
-  selectedList.append(selectedItem!)
+  if(!selectedList.contains(selectedItem!)){
+    if(selectedItem == selectedList[0]-1){
+      selectedList.insert(selectedItem!, at: 0)
+      list[selectedItem!] = 1
+    }else if(selectedItem == selectedList.last!+1){
+      selectedList.append(selectedItem!)
+      list[selectedItem!] = 1
+    }else{
+      print("select continous slot")
+    }
+  
   }else if(selectedList.contains(selectedItem!)){
     if(selectedItem == selectedList[0]){
         list[selectedItem!] = 0
@@ -23,11 +31,11 @@ if(selectedList.count == 0){
       list[selectedItem!] = 0
         selectedList.removeLast()
     }else{
-      print("select continous slot")
+      print("you can only unselect continous slot")
     }
   }else{
     print("select continous slot")
   }
 }
-print(selectedList)
+// print(selectedList)
 }
